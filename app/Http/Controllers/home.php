@@ -1,22 +1,20 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\upload_standards;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class UploadStandardsController extends Controller
+use App\Models\user_projects;
+use Illuminate\Http\Request;
+
+class home extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        if(!Auth::check()){
-            return view('questions');
-        } else{
-            return view(view: 'create');
-        }
+        $projects = user_projects::all();
+
+        return view('home' , compact('projects'));
     }
 
     /**
@@ -32,15 +30,13 @@ class UploadStandardsController extends Controller
      */
     public function store(Request $request)
     {
-        upload_standards::create([
-            
-        ]);
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(upload_standards $upload_standards)
+    public function show(string $id)
     {
         //
     }
@@ -48,7 +44,7 @@ class UploadStandardsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(upload_standards $upload_standards)
+    public function edit(string $id)
     {
         //
     }
@@ -56,7 +52,7 @@ class UploadStandardsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, upload_standards $upload_standards)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -64,7 +60,7 @@ class UploadStandardsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(upload_standards $upload_standards)
+    public function destroy(string $id)
     {
         //
     }

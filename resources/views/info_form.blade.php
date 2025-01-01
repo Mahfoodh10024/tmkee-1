@@ -30,13 +30,14 @@
         </form>
         
         <div class="tog">
-            <a href="/ques">
+            <a href="questions">
                 <div>السابق</div>
             </a>
             <a href="/info1">
                 <div>التالي</div>
             </a>
         </div>
+
 </body>
 
 </html>

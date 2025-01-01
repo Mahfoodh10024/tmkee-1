@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('useraccounts', function (Blueprint $table) {
+        Schema::create('users_accounts', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('phone');
@@ -21,13 +21,15 @@ return new class extends Migration
             $table->string('policy');
             $table->timestamps();
         });
+
     }
+
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('useraccounts');
+        Schema::dropIfExists('users_accounts');
     }
 };

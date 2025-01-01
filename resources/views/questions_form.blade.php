@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @vite(['resources/css/add_project.css' , 'resources/js/app.js'])
+
+
     <title>Questions</title>
 </head>
 <body>
@@ -50,10 +53,10 @@
 
 
         <div class="tog">
-            <a href="">
+            <a class="got" href="">
                 <div >السابق</div>
             </a>
-            <a href="/info">
+            <a class="got" href="/info">
                 <div id="level1" >التالي</div>
             </a>
         </div>

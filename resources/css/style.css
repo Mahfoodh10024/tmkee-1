@@ -502,91 +502,75 @@ body{
   left: -1px;
   top: 237px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
 }
-.div14 {
-  color: #000000;
-  text-align: left;
-  font-family: "Cairo-Bold", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  font-weight: 700;
-  position: absolute;
-  left: 9px;
-  top: 1px;
-}
-.div15 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 6px;
-  letter-spacing: 0.04em;
-  font-weight: 400;
-  position: absolute;
-  left: 35px;
-  top: 24px;
-}
-._30 {
-  color: #000000;
-  text-align: left;
-  font-family: "Cairo-Regular", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  font-weight: 400;
-  position: absolute;
-  left: 198px;
-  top: 9px;
-  width: 123px;
-}
-._12-12-2 {
-  color: #000000;
-  text-align: left;
-  font-family: "Cairo-Light", sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.04em;
-  font-weight: 300;
-  position: absolute;
-  left: 17px;
-  top: 39px;
-}
+
 .div16 {
+  width: 100%;
+  height: 60%;
   color: #000000;
   text-align: center;
   font-family: "Cairo-Light", sans-serif;
-  font-size: 10px;
+  font-size: small;
   letter-spacing: 0.04em;
-  font-weight: 300;
-  position: absolute;
+  font-weight: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
 }
-.frame-52 {
-  background: #ffffff;
-  border-radius: 10px;
-  width: 328px;
-  height: 495px;
-  position: absolute;
-  left: 80px;
-  top: 286px;
-  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 1);
-  overflow: hidden;
-}
-.frame-51 {
-  background: #ffffff;
-  border-radius: 10px;
-  width: 328px;
-  height: 495px;
-  position: absolute;
-  left: 460px;
-  top: 286px;
-  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 1);
-  overflow: hidden;
-}
+
 .frame-50 {
   background: #ffffff;
   border-radius: 10px;
   width: 328px;
   height: 495px;
-  position: absolute;
-  left: 850px;
-  top: 286px;
+  position: relative;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 1);
   overflow: hidden;
+  transition: all 0.1s ease;
+}
+
+.frame-50:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 2px 0px #FFFFFF;
+}
+
+
+.frame-21 .info{
+  font-size: small;
+  width: 100%;
+  height: 35%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.info .inf{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  height: 70px;
+}
+
+.projects{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3 ,1fr);
+  grid-gap: 30px;
+  width: 95%;
+  height: 100%;
+  position: absolute;
+  top: 35%;
+  left: 70px;
+  padding-left: 30px;
+
 }

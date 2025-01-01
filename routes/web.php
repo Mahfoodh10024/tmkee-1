@@ -1,9 +1,14 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\home;
 use App\Http\Controllers\pages;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\UploadStandardsController;
 use App\Http\Controllers\UseraccountController;
+use App\Http\Controllers\UserProjectsController;
+use App\Http\Controllers\UsersAccountsController;
+use App\Models\users_accounts;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\Checkuserlogin;
 
@@ -18,13 +23,15 @@ use App\Http\Middleware\Checkuserlogin;
 |
 */
 
-Route::get('/', function () {
-    return view('Home');
-})->name(name: 'main');
+// Route::get('/', function () {
+//     return view('Home');
+// })->name(name: 'main');
+
+route::resource('/' , home::class);
 
 
 Route::get('/singup' , function(){
-    return view('projects');
+    return view('create');
 })->name('create');
 
 
@@ -39,9 +46,7 @@ Route::get('/newproject', function () {
 })->name('project')->middleware(Checkuserlogin::class);
 
 
-Route::resource('account', controller: UseraccountController::class);
 
-Route::resource('addproject', controller: ProjectController::class);
 
 
 Route::get('/home', function(){
@@ -63,6 +68,14 @@ Route::get('/info1', function(){
 })->name('info1');
 
 
-Route::get('/ques', function(){
-    return view('questions');
-})->name(name: 'questions');
+
+// Route::get('/questions',function(){
+//         return view('questions');
+// })->name('questions')->middleware(Checkuserlogin::class);
+
+
+Route::resource('questions', UploadStandardsController::class);
+
+Route::resource('account', controller: UsersAccountsController::class);
+
+Route::resource('addproject', controller: UserProjectsController::class);

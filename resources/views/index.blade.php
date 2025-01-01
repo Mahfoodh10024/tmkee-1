@@ -16,14 +16,14 @@
 
         <div class="div">تمكين</div>
 
-        <a href="{{route('questions')}}">
+        <a href="questions">
       <div id="div3" class="frame-18">
           <div id="div3" class="div3">إضافة مشروع</div>
         </div>
       </a>
       
 
-      <a href="/home">
+      <a href="/">
         <div class="frame-8">
           <div class="div2">الرئيسيه</div>
           <div class="h">

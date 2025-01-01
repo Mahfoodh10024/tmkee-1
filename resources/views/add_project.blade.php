@@ -8,20 +8,21 @@
 
 
     <title>New project</title>
-
-
-
 </head>
 <body>
 
 
-        
-        <div class="progress">
-            <div id="l1" class="p1">1</div>
-            <div id="l2" class="p2">2</div>
-            <div id="l3" class="p3">3</div>
-            <div id="l4" class="p4">4</div>
+
+    <div class="steps">
+        <span class="circle active">1</span>
+        <span class="circle">2</span>
+        <span class="circle">3</span>
+        <span class="circle">4</span>
+        <div class="progress-bar">
+          <span class="indicator"></span>
         </div>
+      </div>
+
 
 
         <div class="add">

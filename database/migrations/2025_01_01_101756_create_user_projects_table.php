@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('projects', function (Blueprint $table) {
-            $table->id();
+        Schema::create('user_projects', function (Blueprint $table) {
+             $table->id();
             $table->string('name');
             $table->string('type');
             $table->string('budget');
@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('project_period');
             $table->string('tools');
             $table->string('executer');
+            // $table->foreignId('project_id')->constrained('users_accounts',column: column: 'id')->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('projects');
+        Schema::dropIfExists('user_projects');
     }
 };

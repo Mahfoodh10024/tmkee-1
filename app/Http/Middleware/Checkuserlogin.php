@@ -22,7 +22,7 @@ class Checkuserlogin
             return redirect()->route('create'); 
         } 
         else if(Auth::check()){
-            return redirect()->route(route: 'project'); 
+            return redirect()->route(route: 'questions'); 
         }
         return $next($request);
     }
