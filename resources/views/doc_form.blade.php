@@ -10,13 +10,13 @@
     
     <form action="" method="post">
         <div class="inp2">
-            <input type="text" placeholder="نوع المشروع">
+            <input type="file" placeholder="نوع المشروع">
         </div>
         <div class="inp3">
-            <input type="text" placeholder="الميزانيه">
+            <input type="file" placeholder="الميزانيه">
         </div>
         <div class="inp4">
-            <input type="text" placeholder="">
+            <input type="file" placeholder="">
         </div>
 
         <input type="submit" value="إرسال">
